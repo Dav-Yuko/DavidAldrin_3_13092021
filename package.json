@@ -1,0 +1,19 @@
+{
+  "name": "sass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dav-Yuko/DavidAldrin_3_13092021.git"
+  },
+  "author": "David Aldrin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dav-Yuko/DavidAldrin_3_13092021/issues"
+  },
+  "homepage": "https://github.com/Dav-Yuko/DavidAldrin_3_13092021#readme"
+}
