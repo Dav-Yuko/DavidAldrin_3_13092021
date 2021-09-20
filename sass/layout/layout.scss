@@ -1,0 +1,19 @@
+/*     aide mise en forme de base     */
+form, div {
+    border: 1px solid $color-primary;
+}
+
+.restaurants {
+    background-color: lawngreen;
+}
+.restaurant {
+    background-color: lightpink;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+h1 {
+    @include font-title;
+    margin: 0.5rem auto;
+}

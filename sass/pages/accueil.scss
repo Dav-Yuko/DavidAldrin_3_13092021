@@ -1,0 +1,60 @@
+.location {
+    font-weight: 600;
+    box-shadow: inset 0 2px 4px rgb(201, 200, 200);
+    background-color: $background-medium;
+    text-align: center;
+}
+.fa-map-marker-alt {
+    font-weight: 800;
+    font-size: 1.2rem;
+    padding: 1rem 1rem;
+
+}
+.explorer {
+    background-color: $background-light;
+    padding-bottom: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    h2 {
+        padding-top: 2.5rem;
+        margin: 0;
+    }
+    p {
+        padding-bottom: 1rem;
+    }
+    button {
+        @include button-style;
+    }
+}
+.steps {
+    display: flex;
+    flex-direction: column;
+    button {
+        background-color: $background-light;
+        position: relative;
+        border-radius: 1.5rem;
+        height: 5rem;
+        margin: 0.5rem 2rem;
+        box-shadow: 0 6px 6px $background-medium;
+        border: none;
+        font-size: 1rem;
+        font-weight: 800;
+
+        i {
+            color: gray;
+            font-size: 1.5;
+        }
+    
+        .step-number {
+            position: absolute;
+            left: -1rem;
+            top: 1.5rem;
+            padding: 0.4rem 0.7rem;
+            border-radius: 50%;
+            background-color: $color-primary;
+            color: white;
+            font-size: 0.9rem;
+            font-weight: 400;
+        }
+    }
+}

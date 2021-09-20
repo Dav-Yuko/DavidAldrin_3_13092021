@@ -1,5 +1,116 @@
+/*     polices     */
+/*     couleurs     */
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+span,
+p,
+h2,
+h3 {
+  font-family: "Roboto";
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+p {
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: #5f5e5e;
+}
+
+/*     aide mise en forme de base     */
+form, div {
+  border: 1px solid #9356dc;
+}
+
+.restaurants {
+  background-color: lawngreen;
+}
+
+.restaurant {
+  background-color: lightpink;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 h1 {
-  color: green;
+  font-family: "Shrikhand";
+  font-size: 2rem;
+  text-align: center;
+  margin: 0.5rem auto;
+}
+
+.location {
+  font-weight: 600;
+  box-shadow: inset 0 2px 4px #c9c8c8;
+  background-color: #eaeaea;
+  text-align: center;
+}
+
+.fa-map-marker-alt {
+  font-weight: 800;
+  font-size: 1.2rem;
+  padding: 1rem 1rem;
+}
+
+.explorer {
+  background-color: #f6f6f6;
+  padding-bottom: 3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.explorer h2 {
+  padding-top: 2.5rem;
+  margin: 0;
+}
+.explorer p {
+  padding-bottom: 1rem;
+}
+.explorer button {
+  font-size: 1rem;
+  font-weight: 400;
+  color: white;
+  border-radius: 3rem;
+  background: radial-gradient(ellipse farthest-corner at top left, #ff79da, #9356dc);
+  border: none;
+  box-shadow: 0px 2px 4px gray;
+  padding: 1rem 1.5rem;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+}
+.steps button {
+  background-color: #f6f6f6;
+  position: relative;
+  border-radius: 1.5rem;
+  height: 5rem;
+  margin: 0.5rem 2rem;
+  box-shadow: 0 6px 6px #eaeaea;
+  border: none;
+  font-size: 1rem;
+  font-weight: 800;
+}
+.steps button i {
+  color: gray;
+  font-size: 1.5;
+}
+.steps button .step-number {
+  position: absolute;
+  left: -1rem;
+  top: 1.5rem;
+  padding: 0.4rem 0.7rem;
+  border-radius: 50%;
+  background-color: #9356dc;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=style.css.map */
