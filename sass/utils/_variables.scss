@@ -1,14 +1,14 @@
 /*     polices     */
-$fontfam-title: "Shrikhand";
-$fontfam-text: "Roboto";
+$fontfam-title: "Shrikhand",'sans-serif';
+$fontfam-text: "Roboto", 'sans-serif';
 
 /*     couleurs     */
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
-$background-dark: #353535;
-$background-medium: #eaeaea;
-$background-light: #f6f6f6;
+$color-darkest: #353535;
+$color-medium: lighten($color-darkest, 70);
+$color-light: lighten($color-darkest, 75);
 
 @mixin font-title {
   font-family: $fontfam-title;
@@ -18,7 +18,8 @@ $background-light: #f6f6f6;
 span,
 p,
 h2,
-h3 {
+h3,
+li {
   font-family: $fontfam-text;
 }
 h2 {
@@ -38,6 +39,6 @@ p {
   border-radius: 3rem;
   background: radial-gradient(ellipse farthest-corner at top left, $color-secondary, $color-primary);
   border: none;
-  box-shadow: 0px 2px 4px gray;
+  box-shadow: 0px 4px 4px $color-medium;
   padding: 1rem 1.5rem;
 }

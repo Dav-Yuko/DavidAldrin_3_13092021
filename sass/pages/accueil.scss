@@ -1,60 +1,131 @@
 .location {
-    font-weight: 600;
-    box-shadow: inset 0 2px 4px rgb(201, 200, 200);
-    background-color: $background-medium;
-    text-align: center;
-}
-.fa-map-marker-alt {
+  font-weight: 600;
+  box-shadow: inset 0 3px 2px lighten($color-darkest, 60);
+  background-color: $color-medium;
+  text-align: center;
+
+  .fa-map-marker-alt {
     font-weight: 800;
     font-size: 1.2rem;
-    padding: 1rem 1rem;
-
+    padding: 1rem 0.8rem;
+  }
+  span {
+    padding-right: 2.5rem;
+  }
 }
 .explorer {
-    background-color: $background-light;
-    padding-bottom: 3rem;
-    margin-bottom: 1rem;
-    text-align: center;
-    h2 {
-        padding-top: 2.5rem;
-        margin: 0;
+  background-color: $color-light;
+  padding-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  h2 {
+    padding-top: 2.5rem;
+  }
+  p {
+    padding-bottom: 1.5rem;
+  }
+  button {
+    @include button-style;
+  }
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  h2 {
+    padding-left: 1rem;
+  }
+  button {
+    background-color: $color-light;
+    position: relative;
+    border-radius: 1.5rem;
+    height: 5rem;
+    margin: 0.7rem 2rem;
+    box-shadow: 0 6px 6px $color-medium;
+    border: none;
+    font-size: 1rem;
+    font-weight: 800;
+
+    i {
+      color: gray;
+      font-size: 1.3rem;
+      padding-right: 1rem;
+    }
+
+    span {
+      padding-right: 2rem;
+    }
+
+    .step-number {
+      position: absolute;
+      left: -1rem;
+      top: 1.5rem;
+      padding: 0.4rem 0.7rem;
+      border-radius: 50%;
+      background-color: $color-primary;
+      color: white;
+      font-size: 0.9rem;
+      font-weight: 400;
+    }
+  }
+}
+
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-light;
+  margin-top: 3rem;
+  padding-bottom: 3rem;
+  justify-content: flex-around;
+
+  h2 {
+    padding-left: 1rem;
+  }
+
+  .restaurants__form {
+    position: relative;
+    border-radius: 1rem;
+    margin: 0 1rem 1rem 1rem;
+    background-color: white;
+    box-shadow: 0px 2px 12px 4px $color-medium;
+    text-decoration: none;
+
+    .restaurant__describ {
+      padding-left: 1rem;
+    }
+    h3 {
+      font-weight: bold;
+      color: black;
+      margin-bottom: 0.5rem;
     }
     p {
-        padding-bottom: 1rem;
+      margin-top: 0;
     }
-    button {
-        @include button-style;
+    .fa-heart {
+      position: absolute;
+      right: 1.5rem;
+      bottom: 2rem;
+      font-size: 1.5rem;
+      color: black;
     }
-}
-.steps {
-    display: flex;
-    flex-direction: column;
-    button {
-        background-color: $background-light;
-        position: relative;
-        border-radius: 1.5rem;
-        height: 5rem;
-        margin: 0.5rem 2rem;
-        box-shadow: 0 6px 6px $background-medium;
-        border: none;
-        font-size: 1rem;
-        font-weight: 800;
+  }
 
-        i {
-            color: gray;
-            font-size: 1.5;
-        }
-    
-        .step-number {
-            position: absolute;
-            left: -1rem;
-            top: 1.5rem;
-            padding: 0.4rem 0.7rem;
-            border-radius: 50%;
-            background-color: $color-primary;
-            color: white;
-            font-size: 0.9rem;
-            font-weight: 400;
-        }
-    }
+  .restaurant__picture {
+    height: 12rem;
+    border-radius: 0.8rem 0.8rem 0 0;
+    background-size: cover;
+    background-position: center;
+  }
+  .picture1 {
+    background-image: url("images/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  }
+  .picture2 {
+    background-image: url("images/stil-u2Lp8tXIcjw-unsplash.jpg");
+  }
+  .picture3 {
+    background-image: url("images/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  }
+  .picture4 {
+    background-image: url("images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+  }
 }
