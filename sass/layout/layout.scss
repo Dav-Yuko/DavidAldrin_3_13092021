@@ -16,12 +16,13 @@ li {
 }
 footer {
     background-color: $color-darkest;
-    color: white;
+    
     h3 {
         font-family: $fontfam-title;
         font-size: 1.3rem;
         font-weight: 200;
         padding-left: 2rem;
+        color: white;
     }
     li {
         font-size: 1rem;
