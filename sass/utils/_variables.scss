@@ -10,11 +10,6 @@ $color-darkest: #353535;
 $color-medium: lighten($color-darkest, 70);
 $color-light: lighten($color-darkest, 75);
 
-@mixin font-title {
-  font-family: $fontfam-title;
-  font-size: 2rem;
-  text-align: center;
-}
 span,
 p,
 h2,
@@ -26,41 +21,4 @@ li {
 h2 {
   font-size: 1.5rem;
   font-weight: 800;
-}
-
-
-@mixin button-style {
-  font-size: 1rem;
-  font-weight: 600;
-  color: white;
-  border-radius: 3rem;
-  background: radial-gradient(ellipse farthest-corner at top left, $color-secondary, $color-primary);
-  border: none;
-  box-shadow: 2px 4px 4px #c0c0c0;
-  padding: 1rem 1.5rem;
-  cursor: pointer;
-  transition-duration: .25s;
-  &:hover {
-    opacity: 0.8;
-    box-shadow: 2px 4px 4px #929292;
-  }
-}
-
-@mixin new-style {
-  position :absolute;
-  top: 1rem;
-  right: 1rem;
-  background-color: $color-tertiary;
-  border-radius: 0.2rem;
-  color:hsl(165, 93%, 24%);
-  font-weight: 600;
-  padding: 0.5rem 1rem;
-}
-@mixin like-click {
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  font-weight: 800;
-  
-
 }

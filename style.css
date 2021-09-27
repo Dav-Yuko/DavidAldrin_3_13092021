@@ -186,10 +186,12 @@ footer li i {
   color: black;
 }
 .restaurants .restaurants__form .fa-heart:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background: -webkit-gradient(linear, center top, center bottom, from(#9356dc), to(#ff79da));
+  transition-duration: 0.5s;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: 800;
+  -webkit-transition-duration: 0.5s;
+  font-weight: 600;
 }
 .restaurants .restaurants__form .new {
   position: absolute;
@@ -244,10 +246,12 @@ footer li i {
   color: black;
 }
 .restaurants__style .fa-heart:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background: -webkit-gradient(linear, center top, center bottom, from(#9356dc), to(#ff79da));
+  transition-duration: 0.5s;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: 800;
+  -webkit-transition-duration: 0.5s;
+  font-weight: 600;
 }
 .restaurants__style .new {
   position: absolute;
@@ -296,21 +300,53 @@ footer li i {
   background-color: white;
   border-radius: 1rem;
   margin: 1rem 1rem 0 1rem;
-  box-shadow: 0px 2px 12px 4px #e8e8e8;
+  animation: fadein 2s;
+  box-shadow: 0px 2px 6px 4px #dbdbdb;
+  animation: food 1000ms;
 }
-.food .prix {
+
+@keyframes food {
+  0% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.food1 {
+  animation-delay: 10ms;
+}
+
+.food2 {
+  animation-delay: 300ms;
+}
+
+.food3 {
+  animation-delay: 600ms;
+}
+
+.prix {
   padding-right: 0.5rem;
   font-weight: 600;
 }
-.food h3 {
+
+h3 {
   padding: 1rem 1rem 0 1rem;
   margin: 0;
 }
-.food .food__describ {
+
+.food__describ {
   display: flex;
   justify-content: space-between;
 }
-.food p {
+
+p {
   padding: 0.5rem 1rem 1rem 1rem;
   margin: 0;
 }
@@ -318,10 +354,31 @@ footer li i {
 .green-trait {
   position: relative;
   left: 1rem;
-  top: -0.5rem;
-  height: 5px;
+  top: -0.3rem;
   width: 60px;
-  border-top: 5px solid #98e2cf;
+  border-top: 4px solid #98e2cf;
+}
+
+.order {
+  margin: 4rem auto;
+  text-align: center;
+}
+.order button {
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  border-radius: 3rem;
+  background: radial-gradient(ellipse farthest-corner at top left, #ff79da, #9356dc);
+  border: none;
+  box-shadow: 2px 4px 4px #c0c0c0;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  transition-duration: 0.25s;
+  padding: 1rem 2rem;
+}
+.order button:hover {
+  opacity: 0.8;
+  box-shadow: 2px 4px 4px #929292;
 }
 
 /*# sourceMappingURL=style.css.map */
