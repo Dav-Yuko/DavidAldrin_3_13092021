@@ -47,10 +47,9 @@
 }
 .background {
   background-color: $color-light;
-
 }
 .menu__part {
-    margin-bottom: 0.8rem;
+  margin-bottom: 0.8rem;
   padding: 2rem 1rem 0 1rem;
   text-transform: uppercase;
 }
@@ -58,30 +57,64 @@
   background-color: white;
   border-radius: 1rem;
   margin: 1rem 1rem 0 1rem;
-  box-shadow: 0px 2px 12px 4px $color-medium;
-  .prix {
-    padding-right: 0.5rem;
-    font-weight: 600;
+  animation: fadein 2s;
+  box-shadow: 0px 2px 6px 4px darken($color-medium, 5);
+  
+  animation: food 1000ms;
+}
+@keyframes food{
+  0% {
+      transform: translateY(50px);
   }
-  h3 {
-    padding: 1rem 1rem 0 1rem;
-    margin: 0;
+  100% {
+      transform: translateY(0);
   }
- .food__describ {
-     display: flex;
-     justify-content:space-between;
- }
-  p {
-    padding: 0.5rem 1rem 1rem 1rem;
-    margin :0;
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
+.food1 {
+  animation-delay: 10ms;
+}
+.food2 {
+  animation-delay: 300ms;
+}
+.food3 {
+  animation-delay: 600ms;
+}
+
+.prix {
+  padding-right: 0.5rem;
+  font-weight: 600;
+}
+h3 {
+  padding: 1rem 1rem 0 1rem;
+  margin: 0;
+}
+.food__describ {
+  display: flex;
+  justify-content: space-between;
+}
+p {
+  padding: 0.5rem 1rem 1rem 1rem;
+  margin: 0;
+}
+
 .green-trait {
-    position: relative;
-    left: 1rem;
-    top: -0.5rem;
-    height: 5px;
-    width: 60px;
-  
-    border-top: 5px solid $color-tertiary;
+  position: relative;
+  left: 1rem;
+  top: -0.3rem;
+  width: 60px;
+  border-top: 4px solid $color-tertiary;
+}
+.order {
+  margin: 4rem auto;
+  text-align: center;
+  button {
+    @include button-style;
+    padding: 1rem 2rem;
+  }
 }
