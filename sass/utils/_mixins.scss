@@ -37,15 +37,8 @@
 }
 
 @mixin like-click {
-  background: -webkit-gradient(
-    linear,
-    center top,
-    center bottom,
-    from($color-primary),
-    to($color-secondary));
-    transition-duration: 0.5s;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-transition-duration: 0.5s;
+  background: linear-gradient(0deg, $color-primary, $color-secondary);
+  opacity: 1;
+  transition: 0.5s;
   font-weight: 600;
 }

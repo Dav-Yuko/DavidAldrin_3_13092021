@@ -186,11 +186,9 @@ footer li i {
   color: black;
 }
 .restaurants .restaurants__form .fa-heart:hover {
-  background: -webkit-gradient(linear, center top, center bottom, from(#9356dc), to(#ff79da));
-  transition-duration: 0.5s;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-transition-duration: 0.5s;
+  background: linear-gradient(0deg, #9356dc, #ff79da);
+  opacity: 1;
+  transition: 0.5s;
   font-weight: 600;
 }
 .restaurants .restaurants__form .new {
@@ -245,13 +243,19 @@ footer li i {
   font-size: 2rem;
   color: black;
 }
-.restaurants__style .fa-heart:hover {
-  background: -webkit-gradient(linear, center top, center bottom, from(#9356dc), to(#ff79da));
-  transition-duration: 0.5s;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-transition-duration: 0.5s;
-  font-weight: 600;
+.restaurants__style .fa-heart:hover::after {
+  opacity: 1;
+}
+.restaurants__style .fa-heart::after {
+  opacity: 0;
+  transition: 0.5s;
+  content: "";
+  background: linear-gradient(0deg, #9356dc, #ff79da);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 .restaurants__style .new {
   position: absolute;

@@ -21,7 +21,21 @@
     font-size: 2rem;
     color: black;
     &:hover {
-      @include like-click;
+      &::after {
+        opacity: 1;
+      }
+       //@include like-click;     
+    }
+    &::after {
+    opacity: 0;
+    transition: .5s;
+    content: "";
+    background: linear-gradient(0deg,$color-primary,$color-secondary);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
     }
   }
   .new {
@@ -59,15 +73,15 @@
   margin: 1rem 1rem 0 1rem;
   animation: fadein 2s;
   box-shadow: 0px 2px 6px 4px darken($color-medium, 5);
-  
+
   animation: food 1000ms;
 }
-@keyframes food{
+@keyframes food {
   0% {
-      transform: translateY(50px);
+    transform: translateY(50px);
   }
   100% {
-      transform: translateY(0);
+    transform: translateY(0);
   }
   from {
     opacity: 0;
