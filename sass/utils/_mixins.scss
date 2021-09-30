@@ -42,3 +42,18 @@
   transition: 0.5s;
   font-weight: 600;
 }
+
+@keyframes food-animation {
+  from {
+    transform: translateY(50px);
+  }
+  to {
+    transform: translateY(0);
+  }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
