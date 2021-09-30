@@ -16,6 +16,20 @@ h2 {
   font-weight: 800;
 }
 
+@keyframes food-animation {
+  from {
+    transform: translateY(50px);
+  }
+  to {
+    transform: translateY(0);
+  }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 body {
   display: flex;
   flex-direction: column;
@@ -247,9 +261,10 @@ footer li i {
   opacity: 1;
 }
 .restaurants__style .fa-heart::after {
+  content: "";
   opacity: 0;
   transition: 0.5s;
-  content: "";
+  background-color: transparent;
   background: linear-gradient(0deg, #9356dc, #ff79da);
   position: absolute;
   top: 0;
@@ -257,117 +272,124 @@ footer li i {
   height: 100%;
   width: 100%;
 }
-.restaurants__style .new {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background-color: #98e2cf;
-  border-radius: 0.2rem;
-  color: #04765a;
-  font-weight: 600;
-  padding: 0.5rem 1rem;
-}
-
-.restaurant__picture {
+.restaurants__style .restaurant__picture {
   height: 12rem;
   background-size: cover;
   background-position: center;
 }
-
-.picture1 {
+.restaurants__style .picture1 {
   background-image: url("images/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
 }
-
-.picture2 {
+.restaurants__style .picture2 {
   background-image: url("images/stil-u2Lp8tXIcjw-unsplash.jpg");
 }
-
-.picture3 {
+.restaurants__style .picture3 {
   background-image: url("images/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
 }
-
-.picture4 {
+.restaurants__style .picture4 {
   background-image: url("images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
 }
 
 .background {
   background-color: #f4f4f4;
 }
-
-.menu__part {
+.background .menu {
+  opacity: 0;
+  animation: food-animation 600ms;
+  animation-fill-mode: forwards;
+}
+.background .menu--1 {
+  animation-delay: 600ms;
+}
+.background .menu--2 {
+  animation-delay: 1200ms;
+}
+.background .menu--3 {
+  animation-delay: 1800ms;
+}
+.background .menu__part {
   margin-bottom: 0.8rem;
   padding: 2rem 1rem 0 1rem;
   text-transform: uppercase;
 }
-
-.food {
-  background-color: white;
-  border-radius: 1rem;
-  margin: 1rem 1rem 0 1rem;
-  animation: fadein 2s;
-  box-shadow: 0px 2px 6px 4px #dbdbdb;
-  animation: food 1000ms;
-}
-
-@keyframes food {
-  0% {
-    transform: translateY(50px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-.food1 {
-  animation-delay: 10ms;
-}
-
-.food2 {
-  animation-delay: 300ms;
-}
-
-.food3 {
-  animation-delay: 600ms;
-}
-
-.prix {
-  padding-right: 0.5rem;
-  font-weight: 600;
-}
-
-h3 {
-  padding: 1rem 1rem 0 1rem;
-  margin: 0;
-}
-
-.food__describ {
-  display: flex;
-  justify-content: space-between;
-}
-
-p {
-  padding: 0.5rem 1rem 1rem 1rem;
-  margin: 0;
-}
-
-.green-trait {
+.background .green-trait {
   position: relative;
   left: 1rem;
   top: -0.3rem;
   width: 60px;
   border-top: 4px solid #98e2cf;
+  animation: food-animation 2000ms;
+  animation-fill-mode: forwards;
 }
-
-.order {
+.background .green-trait--1 {
+  animation-delay: 500ms;
+}
+.background .green-trait--2 {
+  animation-delay: 1000ms;
+}
+.background .green-trait--3 {
+  animation-delay: 1500ms;
+}
+.background .food {
+  opacity: 0;
+  background-color: white;
+  border-radius: 1rem;
+  margin: 1rem 1rem 0 1rem;
+  box-shadow: 0px 2px 6px 4px #dbdbdb;
+  animation: food-animation 1000ms;
+  animation-fill-mode: forwards;
+}
+.background .food--1 {
+  animation-delay: 300ms;
+}
+.background .food--2 {
+  animation-delay: 600ms;
+}
+.background .food--3 {
+  animation-delay: 900ms;
+}
+.background .food--4 {
+  animation-delay: 1200ms;
+}
+.background .food--5 {
+  animation-delay: 1500ms;
+}
+.background .food--6 {
+  animation-delay: 1800ms;
+}
+.background .food--7 {
+  animation-delay: 2100ms;
+}
+.background .food--8 {
+  animation-delay: 2400ms;
+}
+.background .food--9 {
+  animation-delay: 2700ms;
+}
+.background .food--10 {
+  animation-delay: 3000ms;
+}
+.background .food .prix {
+  padding-right: 0.5rem;
+  font-weight: 600;
+}
+.background .food h3 {
+  padding: 1rem 1rem 0 1rem;
+  margin: 0;
+}
+.background .food .food__describ {
+  display: flex;
+  justify-content: space-between;
+}
+.background .food p {
+  padding: 0.5rem 1rem 1rem 1rem;
+  margin: 0;
+}
+.background .order {
   margin: 4rem auto;
   text-align: center;
 }
-.order button {
+.background .order button {
   font-size: 1rem;
   font-weight: 600;
   color: white;
@@ -380,7 +402,7 @@ p {
   transition-duration: 0.25s;
   padding: 1rem 2rem;
 }
-.order button:hover {
+.background .order button:hover {
   opacity: 0.8;
   box-shadow: 2px 4px 4px #929292;
 }
