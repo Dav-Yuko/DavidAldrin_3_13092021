@@ -37,23 +37,41 @@
 }
 
 @mixin like-click {
-  background: linear-gradient(0deg, $color-primary, $color-secondary);
-  opacity: 1;
-  transition: 0.5s;
-  font-weight: 600;
-}
+    position: absolute;
+    font-size: 2rem;
+    background: transparent;
+    border: none;
+    color: black;
+    &:hover {
+      font-weight: 800;
+      transition: 500ms;
+    }
+    &:hover::after {
+        opacity: 1;
+        font-weight: 800;
+      }
+    &::after {
+      content: "";
+      opacity: 0;
+      transition: 500ms;
+      background-color: transparent;
+      background: linear-gradient(0deg, $color-primary, $color-secondary);
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      mix-blend-mode: lighten;
+    }
+  }
 
 @keyframes food-animation {
   from {
     transform: translateY(50px);
-  }
-  to {
-    transform: translateY(0);
-  }
-  from {
     opacity: 0;
   }
   to {
+    transform: translateY(0);
     opacity: 1;
   }
 }

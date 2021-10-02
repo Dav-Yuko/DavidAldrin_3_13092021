@@ -1,44 +1,7 @@
-.restaurants__style {
+.restaurant {
   position: relative;
   background-color: $color-light;
-  #restaurant__name {
-    padding-right: auto;
-    text-align: left;
-    background: none;
-  }
-  .restaurant__describ {
-    padding: 1rem 0 3rem 0;
-    margin-top: -2rem;
-    background-color: $color-light;
-    border-radius: 2rem 2rem 0 0;
-    padding-left: 1rem;
-  }
-  .fa-heart {
-    position: absolute;
-    right: 2.5rem;
-    bottom: 4rem;
-    font-size: 2rem;
-    color: black;
-    &:hover {
-      &::after {
-        opacity: 1;
-      }
-      //@include like-click;
-    }
-    &::after {
-      content: "";
-      opacity: 0;
-      transition: 0.5s;
-      background-color: transparent;
-      background: linear-gradient(0deg, $color-primary, $color-secondary);
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-    }
-  }
-  .restaurant__picture {
+  &__picture {
     height: 12rem;
     background-size: cover;
     background-position: center;
@@ -55,6 +18,24 @@
   .picture4 {
     background-image: url("images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
   }
+  #restaurant__name {
+    padding-left: 1rem;
+    padding-right: auto;
+    text-align: left;
+    background: none;
+  }
+  &__describ {
+    padding: 1rem 0 3rem 0;
+    margin-top: -2rem;
+    background-color: $color-light;
+    border-radius: 2rem 2rem 0 0;
+    padding-left: 1rem;
+  }
+  i {
+    @include like-click;
+    right: 2.5rem;
+    bottom: 4rem;
+  }
 }
 
 .background {
@@ -68,13 +49,14 @@
         animation-delay: 600ms * $i;
       }
     }
-    
   }
+
   .menu__part {
     margin-bottom: 0.8rem;
     padding: 2rem 1rem 0 1rem;
     text-transform: uppercase;
   }
+
   .green-trait {
     position: relative;
     left: 1rem;
@@ -88,9 +70,11 @@
         animation-delay: 500ms * $i;
       }
     }
-
   }
+
   .food {
+    position: relative;
+    padding-right: auto;
     opacity: 0;
     background-color: white;
     border-radius: 1rem;
@@ -103,21 +87,63 @@
         animation-delay: 300ms * $i;
       }
     }
-    .prix {
-      padding-right: 0.5rem;
-      font-weight: 600;
-    }
+
     h3 {
       padding: 1rem 1rem 0 1rem;
-      margin: 0;
+      margin-bottom: 0.3rem;
     }
+
     .food__describ {
       display: flex;
       justify-content: space-between;
+      p {
+        margin-top: 0;
+        padding: 0 0 0 1rem;
+      }
+      .prix {
+        padding-right: 1rem;
+        font-weight: 600;
+        margin-top: 0;
+        transition: transform 500ms;
+      }
     }
-    p {
-      padding: 0.5rem 1rem 1rem 1rem;
-      margin: 0;
+
+    .validated {
+      display: flex;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 5rem;
+      transform-origin: 100% 0;
+      transform: scaleX(0);
+      transition: transform 500ms;
+      box-sizing: border-box;
+      justify-content: center;
+      align-items: center;
+      background-color: $color-tertiary;
+      border-radius: 0 1rem 1rem 0;
+
+      .fa-check-circle {
+        position: relative;
+        color: white;
+        font-size: 2rem;
+        transform: translateX(0) rotate(0);
+        transition: transform 500ms ease-in-out;
+      }
+    }
+
+    &:hover .validated {
+      opacity: 1;
+      transform: scaleX(100%);
+    }
+    &:hover .fa-check-circle {
+      transform: translateX(-0.1rem) rotate(1turn);
+    }
+
+    &:hover .prix {
+      transform: translateX(-5rem);
     }
   }
   .order {
@@ -125,7 +151,7 @@
     text-align: center;
     button {
       @include button-style;
-      padding: 1rem 2rem;
+      padding: 1rem 3rem;
     }
   }
 }
