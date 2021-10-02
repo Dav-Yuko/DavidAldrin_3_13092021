@@ -269,6 +269,7 @@ footer li i {
   background-image: url("images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
 }
 .restaurant #restaurant__name {
+  padding-left: 1rem;
   padding-right: auto;
   text-align: left;
   background: none;
@@ -352,6 +353,8 @@ footer li i {
   animation-delay: 1500ms;
 }
 .background .food {
+  position: relative;
+  padding-right: auto;
   opacity: 0;
   background-color: white;
   border-radius: 1rem;
@@ -390,21 +393,57 @@ footer li i {
 .background .food--10 {
   animation-delay: 3000ms;
 }
-.background .food .prix {
-  padding-right: 0.5rem;
-  font-weight: 600;
-}
 .background .food h3 {
   padding: 1rem 1rem 0 1rem;
-  margin: 0;
+  margin-bottom: 0.3rem;
 }
 .background .food .food__describ {
   display: flex;
   justify-content: space-between;
 }
-.background .food p {
-  padding: 0.5rem 1rem 1rem 1rem;
-  margin: 0;
+.background .food .food__describ p {
+  margin-top: 0;
+  padding: 0 0 0 1rem;
+}
+.background .food .food__describ .prix {
+  padding-right: 1rem;
+  font-weight: 600;
+  margin-top: 0;
+  transition: transform 500ms;
+}
+.background .food .validated {
+  display: flex;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 5rem;
+  transform-origin: 100% 0;
+  transform: scaleX(0);
+  transition: transform 500ms;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  background-color: #98e2cf;
+  border-radius: 0 1rem 1rem 0;
+}
+.background .food .validated .fa-check-circle {
+  position: relative;
+  color: white;
+  font-size: 2rem;
+  transform: translateX(0) rotate(0);
+  transition: transform 500ms ease-in-out;
+}
+.background .food:hover .validated {
+  opacity: 1;
+  transform: scaleX(100%);
+}
+.background .food:hover .fa-check-circle {
+  transform: translateX(-0.1rem) rotate(1turn);
+}
+.background .food:hover .prix {
+  transform: translateX(-5rem);
 }
 .background .order {
   margin: 4rem auto;
@@ -421,7 +460,7 @@ footer li i {
   padding: 1rem 1.5rem;
   cursor: pointer;
   transition-duration: 0.25s;
-  padding: 1rem 2rem;
+  padding: 1rem 3rem;
 }
 .background .order button:hover {
   opacity: 0.8;
