@@ -30,8 +30,13 @@
 }
 
 .steps {
-  display: flex;
-  flex-direction: column;
+  .flex-buttons {
+    display: flex;
+    flex-direction: column;
+    @media only screen and (min-width: 1125px) {
+      @include media-style;
+    }
+  }
   h2 {
     padding-left: 1rem;
   }
@@ -46,6 +51,10 @@
     font-size: 1rem;
     font-weight: 800;
     cursor: pointer;
+    @media only screen and (min-width: 1125px) {
+      flex: 1;
+      max-width: 33%;
+    }
     &:hover {
       background: hsl(267, 66%, 60%, 0.1);
     }
@@ -57,6 +66,9 @@
       padding-right: 2rem;
       color: gray;
       font-size: 1.3rem;
+      @media only screen and (min-width: 1125px) {
+        padding-left: 2rem;
+      }
     }
 
     span {
@@ -88,7 +100,18 @@
   h2 {
     padding-left: 1rem;
   }
-
+  .media-flex-retaurants {
+    @media only screen and (min-width: 992px) {
+      display: flex;
+      flex-direction: row;
+    }
+    .part {
+      @media only screen and (min-width: 992px) {
+        flex: 1;
+        max-width: 50%;
+      }
+    }
+  }
   .restaurants {
     position: relative;
     border-radius: 1rem;
@@ -96,8 +119,10 @@
     background-color: white;
     box-shadow: 0px 2px 12px 4px $color-medium;
     text-decoration: none;
+
     &__describ {
       padding-left: 1rem;
+      padding-bottom: 0.5rem;
       h3 {
         font-weight: bold;
         color: black;

@@ -25,6 +25,12 @@
   }
 }
 
+@mixin media-style {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
 @mixin new-style {
   position: absolute;
   top: 1rem;
@@ -37,41 +43,30 @@
 }
 
 @mixin like-click {
-    position: absolute;
-    font-size: 2rem;
-    background: transparent;
-    border: none;
-    color: black;
-    &:hover {
-      font-weight: 800;
-      transition: 500ms;
-    }
-    &:hover::after {
-        opacity: 1;
-        font-weight: 800;
-      }
-    &::after {
-      content: "";
-      opacity: 0;
-      transition: 500ms;
-      background-color: transparent;
-      background: linear-gradient(0deg, $color-primary, $color-secondary);
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      mix-blend-mode: lighten;
-    }
+  position: absolute;
+  font-size: 2rem;
+  background: transparent;
+  border: none;
+  color: black;
+  &:hover {
+    font-weight: 800;
+    transition: 500ms;
   }
-
-@keyframes food-animation {
-  from {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
+  &:hover::after {
     opacity: 1;
+    font-weight: 800;
+  }
+  &::after {
+    content: "";
+    opacity: 0;
+    transition: 500ms;
+    background-color: transparent;
+    background: linear-gradient(0deg, $color-primary, $color-secondary);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    mix-blend-mode: lighten;
   }
 }
