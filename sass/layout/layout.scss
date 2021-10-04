@@ -1,13 +1,13 @@
-
-
 body {
     display: flex;
     flex-direction: column;
+    margin: 0;
+    min-width: 400px;
 }
 h1 {
     @include font-title;
     margin: 0.5rem auto;
-
+    font-weight: 400;
 }
 a {
     text-decoration: none;
@@ -17,13 +17,15 @@ li {
 }
 footer {
     background-color: $color-darkest;
-    
+    padding: 0.5rem 0 0.5rem 0;
     h3 {
         font-family: $fontfam-title;
         font-size: 1.3rem;
         font-weight: 200;
         padding-left: 2rem;
         color: white;
+        @media only screen and (min-width: 992px) {
+            text-align: center;}
     }
     li {
         font-size: 1rem;
@@ -36,4 +38,8 @@ footer {
             width: 0.5rem;
         }
     }
+        @media only screen and (min-width: 992px) {
+            text-align: center;
+    }
+
 }

@@ -29,6 +29,8 @@ h2 {
 body {
   display: flex;
   flex-direction: column;
+  margin: 0;
+  min-width: 400px;
 }
 
 h1 {
@@ -36,6 +38,7 @@ h1 {
   font-size: 2rem;
   text-align: center;
   margin: 0.5rem auto;
+  font-weight: 400;
 }
 
 a {
@@ -48,6 +51,7 @@ li {
 
 footer {
   background-color: #353535;
+  padding: 0.5rem 0 0.5rem 0;
 }
 footer h3 {
   font-family: "Shrikhand", "sans-serif";
@@ -55,6 +59,11 @@ footer h3 {
   font-weight: 200;
   padding-left: 2rem;
   color: white;
+}
+@media only screen and (min-width: 992px) {
+  footer h3 {
+    text-align: center;
+  }
 }
 footer li {
   font-size: 1rem;
@@ -67,6 +76,11 @@ footer li i {
   font-size: 0.9rem;
   padding-right: 1rem;
   width: 0.5rem;
+}
+@media only screen and (min-width: 992px) {
+  footer {
+    text-align: center;
+  }
 }
 
 .location {
@@ -113,9 +127,16 @@ footer li i {
   box-shadow: 2px 4px 4px #929292;
 }
 
-.steps {
+.steps .flex-buttons {
   display: flex;
   flex-direction: column;
+}
+@media only screen and (min-width: 1125px) {
+  .steps .flex-buttons {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+  }
 }
 .steps h2 {
   padding-left: 1rem;
@@ -132,6 +153,12 @@ footer li i {
   font-weight: 800;
   cursor: pointer;
 }
+@media only screen and (min-width: 1125px) {
+  .steps button {
+    flex: 1;
+    max-width: 33%;
+  }
+}
 .steps button:hover {
   background: rgba(146, 86, 220, 0.1);
 }
@@ -142,6 +169,11 @@ footer li i {
   padding-right: 2rem;
   color: gray;
   font-size: 1.3rem;
+}
+@media only screen and (min-width: 1125px) {
+  .steps button i {
+    padding-left: 2rem;
+  }
 }
 .steps button span {
   padding-right: 2rem;
@@ -169,6 +201,18 @@ footer li i {
 .restaurants-index h2 {
   padding-left: 1rem;
 }
+@media only screen and (min-width: 992px) {
+  .restaurants-index .media-flex-retaurants {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .restaurants-index .media-flex-retaurants .part {
+    flex: 1;
+    max-width: 50%;
+  }
+}
 .restaurants-index .restaurants {
   position: relative;
   border-radius: 1rem;
@@ -179,6 +223,7 @@ footer li i {
 }
 .restaurants-index .restaurants__describ {
   padding-left: 1rem;
+  padding-bottom: 0.5rem;
 }
 .restaurants-index .restaurants__describ h3 {
   font-weight: bold;
@@ -264,7 +309,7 @@ footer li i {
   background-color: #f4f4f4;
 }
 .restaurant__picture {
-  height: 12rem;
+  height: 18rem;
   background-size: cover;
   background-position: center;
 }
@@ -300,7 +345,7 @@ footer li i {
   border: none;
   color: black;
   right: 2.5rem;
-  bottom: 4rem;
+  bottom: 1rem;
 }
 .restaurant i:hover {
   font-weight: 800;
@@ -327,6 +372,13 @@ footer li i {
 .background {
   background-color: #f4f4f4;
 }
+@media only screen and (min-width: 992px) {
+  .background .media-flex {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+}
 .background .menu {
   opacity: 0;
   animation: food-animation 600ms;
@@ -341,14 +393,21 @@ footer li i {
 .background .menu--3 {
   animation-delay: 1800ms;
 }
+@media only screen and (min-width: 992px) {
+  .background .menu {
+    flex: 1;
+    max-width: 33%;
+  }
+}
 .background .menu__part {
   margin-bottom: 0.8rem;
-  padding: 2rem 1rem 0 1rem;
+  padding: 2rem 1rem 0 1.5rem;
   text-transform: uppercase;
+  font-weight: 400;
 }
 .background .green-trait {
   position: relative;
-  left: 1rem;
+  left: 1.5rem;
   top: -0.3rem;
   width: 60px;
   border-top: 4px solid #98e2cf;
@@ -476,7 +535,7 @@ footer li i {
   margin: 4rem auto;
   text-align: center;
 }
-.background .order button {
+.background button {
   font-size: 1rem;
   font-weight: 600;
   color: white;
@@ -489,7 +548,7 @@ footer li i {
   transition-duration: 0.25s;
   padding: 1rem 3rem;
 }
-.background .order button:hover {
+.background button:hover {
   opacity: 0.8;
   box-shadow: 2px 4px 4px #929292;
 }
