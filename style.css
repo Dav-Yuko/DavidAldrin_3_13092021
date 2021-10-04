@@ -26,6 +26,36 @@ h2 {
     opacity: 1;
   }
 }
+@keyframes spinner {
+  0% {
+    opacity: 1;
+    transform: rotate(-3turn);
+    border-top: 4px solid #9356dc;
+  }
+  30% {
+    border-top: 4px solid #ff79da;
+  }
+  60% {
+    border-top: 4px solid #98e2cf;
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes background-opacity {
+  0% {
+    opacity: 0.1;
+  }
+  90% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 body {
   display: flex;
   flex-direction: column;
@@ -81,6 +111,27 @@ footer li i {
   footer {
     text-align: center;
   }
+}
+
+section,
+header {
+  animation: background-opacity 4000ms;
+}
+
+.spinner::before {
+  opacity: 0;
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  margin-top: -30px;
+  margin-left: -30px;
+  border-radius: 50%;
+  border-right: 4px solid transparent;
+  animation: spinner 4000ms linear;
 }
 
 .location {

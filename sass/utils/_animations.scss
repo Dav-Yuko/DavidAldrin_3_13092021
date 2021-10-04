@@ -1,10 +1,42 @@
 @keyframes food-animation {
-    from {
-      transform: translateY(50px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
+  from {
+    transform: translateY(50px);
+    opacity: 0;
   }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes spinner {
+  0% {
+    opacity: 1;
+    transform: rotate(-3turn);
+    border-top: 4px solid $color-primary;
+  }
+  30% {
+    border-top: 4px solid $color-secondary;
+  }
+  60% {
+    border-top: 4px solid $color-tertiary;
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes background-opacity {
+  0% {
+    opacity: 0.1;
+  }
+  90% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
