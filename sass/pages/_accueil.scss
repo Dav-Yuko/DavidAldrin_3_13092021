@@ -1,6 +1,6 @@
 section,
-header {
-  animation: background-opacity 4000ms;
+.title {
+  animation: background-opacity 3000ms;
 }
 
 .spinner::before {
@@ -16,7 +16,7 @@ header {
   margin-left: -30px;
   border-radius: 50%;
   border-right: 4px solid transparent;
-  animation: spinner 4000ms linear;
+  animation: spinner 3000ms linear;
 }
 
 .location {
@@ -33,6 +33,7 @@ header {
     padding-right: 2.5rem;
   }
 }
+
 .explorer {
   background-color: $color-light;
   padding-bottom: 2.5rem;
