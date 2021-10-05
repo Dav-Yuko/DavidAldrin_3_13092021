@@ -87,7 +87,7 @@ footer h3 {
   font-family: "Shrikhand", "sans-serif";
   font-size: 1.3rem;
   font-weight: 200;
-  padding-left: 2rem;
+  padding-left: 2.5rem;
   color: white;
 }
 @media only screen and (min-width: 992px) {
@@ -114,8 +114,8 @@ footer li i {
 }
 
 section,
-header {
-  animation: background-opacity 4000ms;
+.title {
+  animation: background-opacity 3000ms;
 }
 
 .spinner::before {
@@ -131,7 +131,7 @@ header {
   margin-left: -30px;
   border-radius: 50%;
   border-right: 4px solid transparent;
-  animation: spinner 4000ms linear;
+  animation: spinner 3000ms linear;
 }
 
 .location {
@@ -535,7 +535,7 @@ header {
 }
 .background .food .food__describ p {
   margin-top: 0;
-  padding: 0 0 0 1rem;
+  padding-left: 1rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
