@@ -70,3 +70,8 @@
     mix-blend-mode: lighten;
   }
 }
+@mixin three-dot {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
