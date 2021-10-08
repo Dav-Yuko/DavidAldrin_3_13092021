@@ -114,7 +114,7 @@ footer li i {
 }
 
 section,
-.title {
+.spinner__background {
   animation: background-opacity 3000ms;
 }
 
@@ -156,6 +156,7 @@ section,
   text-align: center;
 }
 .explorer h2 {
+  margin: 0;
   padding-top: 2.5rem;
 }
 .explorer p {
@@ -247,7 +248,7 @@ section,
   background-color: #f4f4f4;
   margin-top: 3rem;
   padding-bottom: 3rem;
-  justify-content: flex-around;
+  justify-content: space-around;
 }
 .restaurants-index h2 {
   padding-left: 1rem;
@@ -299,14 +300,12 @@ section,
 }
 .restaurants-index .restaurants__describ i:hover::after {
   opacity: 1;
-  font-weight: 800;
 }
 .restaurants-index .restaurants__describ i::after {
   content: "";
   opacity: 0;
   transition: 500ms;
-  background-color: transparent;
-  background: linear-gradient(0deg, #9356dc, #ff79da);
+  background: linear-gradient(0deg, #ff79da, #9356dc);
   position: absolute;
   top: 0;
   left: 0;
@@ -378,7 +377,6 @@ section,
 }
 .restaurant #restaurant__name {
   padding-left: 0.5rem;
-  padding-right: auto;
   text-align: left;
   background: none;
 }
@@ -404,14 +402,12 @@ section,
 }
 .restaurant i:hover::after {
   opacity: 1;
-  font-weight: 800;
 }
 .restaurant i::after {
   content: "";
   opacity: 0;
   transition: 500ms;
-  background-color: transparent;
-  background: linear-gradient(0deg, #9356dc, #ff79da);
+  background: linear-gradient(0deg, #ff79da, #9356dc);
   position: absolute;
   top: 0;
   left: 0;
@@ -480,7 +476,6 @@ section,
   justify-content: space-between;
   flex-direction: row;
   position: relative;
-  padding-right: auto;
   opacity: 0;
   background-color: white;
   border-radius: 1rem;
@@ -542,9 +537,8 @@ section,
 }
 .background .food .prix {
   display: flex;
-  padding: 2rem 1.5rem 0 1rem;
+  padding: 1.9rem 1.5rem 0 1rem;
   font-weight: 600;
-  margin-top: 0;
   transition: transform 500ms;
 }
 .background .food .checked {
@@ -573,7 +567,7 @@ section,
 }
 .background .food:hover .checked {
   opacity: 1;
-  transform: scaleX(100%);
+  transform: scaleX(1);
 }
 .background .food:hover .fa-check-circle {
   transform: translateX(-0.1rem) rotate(1turn);

@@ -1,11 +1,11 @@
 {
-  "name": "sass",
+  "name": "projet-ohmyfood-oc",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./sass/main.scss:./style.css",
-    "prefix": "postcss ./style.css --use autoprefixer -d ./prefixed/"
+    "prefix": "postcss ./style.css --use autoprefixer -d ./"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,10 @@
     "url": "https://github.com/Dav-Yuko/DavidAldrin_3_13092021/issues"
   },
   "homepage": "https://github.com/Dav-Yuko/DavidAldrin_3_13092021#readme",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^10.3.7",
+    "postcss": "^8.3.9",
+    "sass": "^1.42.1"
+  }
 }
