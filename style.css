@@ -114,7 +114,7 @@ footer li i {
 }
 
 section,
-.title {
+.spinner__background {
   animation: background-opacity 3000ms;
 }
 
