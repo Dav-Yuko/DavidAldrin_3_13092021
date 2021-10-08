@@ -31,7 +31,6 @@
   }
   #restaurant__name {
     padding-left: 0.5rem;
-    padding-right: auto;
     text-align: left;
     background: none;
   }
@@ -99,7 +98,6 @@
     justify-content: space-between;
     flex-direction: row;
     position: relative;
-    padding-right: auto;
     opacity: 0;
     background-color: white;
     border-radius: 1rem;
@@ -131,9 +129,8 @@
 
     .prix {
       display: flex;
-      padding: 2rem 1.5rem 0 1rem;
+      padding: 1.9rem 1.5rem 0 1rem;
       font-weight: 600;
-      margin-top: 0;
       transition: transform 500ms;
     }
 
@@ -164,7 +161,7 @@
     }
     &:hover .checked {
       opacity: 1;
-      transform: scaleX(100%);
+      transform: scaleX(1);
     }
     &:hover .fa-check-circle {
       transform: translateX(-0.1rem) rotate(1turn);

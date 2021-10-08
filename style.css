@@ -156,6 +156,7 @@ section,
   text-align: center;
 }
 .explorer h2 {
+  margin: 0;
   padding-top: 2.5rem;
 }
 .explorer p {
@@ -247,7 +248,7 @@ section,
   background-color: #f4f4f4;
   margin-top: 3rem;
   padding-bottom: 3rem;
-  justify-content: flex-around;
+  justify-content: space-around;
 }
 .restaurants-index h2 {
   padding-left: 1rem;
@@ -376,7 +377,6 @@ section,
 }
 .restaurant #restaurant__name {
   padding-left: 0.5rem;
-  padding-right: auto;
   text-align: left;
   background: none;
 }
@@ -476,7 +476,6 @@ section,
   justify-content: space-between;
   flex-direction: row;
   position: relative;
-  padding-right: auto;
   opacity: 0;
   background-color: white;
   border-radius: 1rem;
@@ -538,9 +537,8 @@ section,
 }
 .background .food .prix {
   display: flex;
-  padding: 2rem 1.5rem 0 1rem;
+  padding: 1.9rem 1.5rem 0 1rem;
   font-weight: 600;
-  margin-top: 0;
   transition: transform 500ms;
 }
 .background .food .checked {
@@ -569,7 +567,7 @@ section,
 }
 .background .food:hover .checked {
   opacity: 1;
-  transform: scaleX(100%);
+  transform: scaleX(1);
 }
 .background .food:hover .fa-check-circle {
   transform: translateX(-0.1rem) rotate(1turn);

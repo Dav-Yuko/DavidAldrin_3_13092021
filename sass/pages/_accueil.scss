@@ -40,6 +40,7 @@ section,
   margin-bottom: 1.5rem;
   text-align: center;
   h2 {
+    margin: 0;
     padding-top: 2.5rem;
   }
   p {
@@ -114,7 +115,7 @@ section,
   background-color: $color-light;
   margin-top: 3rem;
   padding-bottom: 3rem;
-  justify-content: flex-around;
+  justify-content: space-around;
 
   h2 {
     padding-left: 1rem;
