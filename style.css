@@ -299,14 +299,12 @@ section,
 }
 .restaurants-index .restaurants__describ i:hover::after {
   opacity: 1;
-  font-weight: 800;
 }
 .restaurants-index .restaurants__describ i::after {
   content: "";
   opacity: 0;
   transition: 500ms;
-  background-color: transparent;
-  background: linear-gradient(0deg, #9356dc, #ff79da);
+  background: linear-gradient(0deg, #ff79da, #9356dc);
   position: absolute;
   top: 0;
   left: 0;
@@ -404,14 +402,12 @@ section,
 }
 .restaurant i:hover::after {
   opacity: 1;
-  font-weight: 800;
 }
 .restaurant i::after {
   content: "";
   opacity: 0;
   transition: 500ms;
-  background-color: transparent;
-  background: linear-gradient(0deg, #9356dc, #ff79da);
+  background: linear-gradient(0deg, #ff79da, #9356dc);
   position: absolute;
   top: 0;
   left: 0;

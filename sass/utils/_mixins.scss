@@ -54,14 +54,12 @@
   }
   &:hover::after {
     opacity: 1;
-    font-weight: 800;
   }
   &::after {
     content: "";
     opacity: 0;
     transition: 500ms;
-    background-color: transparent;
-    background: linear-gradient(0deg, $color-primary, $color-secondary);
+    background: linear-gradient(0deg, $color-secondary, $color-primary);
     position: absolute;
     top: 0;
     left: 0;
